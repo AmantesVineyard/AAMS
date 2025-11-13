@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You | America's Affordable Medical</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body class="alt-bg">
+    <main class="thank-you-main">
+      <section class="thank-you-card">
+        <span class="logo-mark">AAM</span>
+        <h1>We received your intake.</h1>
+        <p>
+          A licensed diabetes supply specialist will reach out within one business day to confirm your benefits and finalize your shipment.
+        </p>
+        <div class="next-steps">
+          <h2>What happens next</h2>
+          <ol>
+            <li>Coverage verification with your insurer (usually within 18 hours).</li>
+            <li>Physician prescription coordination if anything is outstanding.</li>
+            <li>Supply plan walkthrough and delivery scheduling.</li>
+          </ol>
+        </div>
+        <a class="button primary" href="index.html">Return to Home</a>
+        <p class="support-note">
+          Need immediate support? Call <a href="tel:18885551234">(888) 555-1234</a> or email <a href="mailto:support@aamcare.com">support@aamcare.com</a>.
+        </p>
+      </section>
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const leadDetails = JSON.parse(sessionStorage.getItem('latestLead') || '{}');
+        if (leadDetails.firstName) {
+          const heading = document.querySelector('.thank-you-card h1');
+          if (heading) {
+            heading.textContent = `Thank you, ${leadDetails.firstName}. We received your intake.`;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+

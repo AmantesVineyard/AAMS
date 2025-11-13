@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qualify for Coverage | America's Affordable Medical</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body class="alt-bg">
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <span class="logo-mark">AAM</span>
+          <div>
+            <p class="brand-name">America's Affordable Medical</p>
+            <p class="brand-tagline">Diabetes Supply Concierge</p>
+          </div>
+        </div>
+        <nav class="site-nav">
+          <a href="index.html#benefits">Why AAM</a>
+          <a href="index.html#products">Supplies</a>
+          <a href="index.html#process">Process</a>
+          <a href="index.html#form">Contact</a>
+        </nav>
+        <a class="cta-button" href="tel:18885551234">Call Now</a>
+      </div>
+    </header>
+
+    <main class="qualify-main">
+      <div class="container qualify-layout">
+        <aside class="qualify-sidebar">
+          <h1>Let’s get your diabetic supplies covered.</h1>
+          <p>
+            Answer a few questions so we can verify insurance, coordinate your doctor’s sign-off, and ship the right equipment fast.
+            No obligations, no hidden fees.
+          </p>
+          <ul class="checklist">
+            <li>HIPAA-secure intake</li>
+            <li>Licensed specialists in every state</li>
+            <li>Average verification time: 18 hours</li>
+          </ul>
+          <div class="support-card">
+            <p class="support-title">Need a hand?</p>
+            <p>Call us at <a href="tel:18885551234">(888) 555-1234</a> or text <a href="sms:18885551234">(888) 555-1234</a>.</p>
+          </div>
+        </aside>
+
+        <section class="qualify-card">
+          <div class="progress-indicator">
+            <div class="progress-bar"><span id="progress-bar-fill"></span></div>
+            <p id="progress-text">Step 1 of 3</p>
+          </div>
+
+          <form id="qualify-form" class="multi-step-form">
+            <fieldset data-step="1" class="form-step active">
+              <legend>Contact basics</legend>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="qFirstName">First name*</label>
+                  <input id="qFirstName" name="firstName" required />
+                </div>
+                <div class="form-field">
+                  <label for="qLastName">Last name*</label>
+                  <input id="qLastName" name="lastName" required />
+                </div>
+                <div class="form-field">
+                  <label for="qEmail">Email*</label>
+                  <input id="qEmail" name="email" type="email" required />
+                </div>
+                <div class="form-field">
+                  <label for="qPhone">Phone*</label>
+                  <input id="qPhone" name="phone" type="tel" required />
+                </div>
+                <div class="form-field">
+                  <label for="qState">State of residence*</label>
+                  <input id="qState" name="state" maxlength="2" placeholder="ex. FL" required />
+                </div>
+                <div class="form-field">
+                  <label for="qContactMethod">Preferred contact</label>
+                  <select id="qContactMethod" name="contactMethod">
+                    <option value="">Select</option>
+                    <option value="Phone">Phone call</option>
+                    <option value="Text">Text message</option>
+                    <option value="Email">Email</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-nav">
+                <button class="button primary" type="button" data-next>Next</button>
+              </div>
+            </fieldset>
+
+            <fieldset data-step="2" class="form-step">
+              <legend>Coverage snapshot</legend>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="qDiabetesType">Type of diabetes*</label>
+                  <select id="qDiabetesType" name="diabetesType" required>
+                    <option value="">Select</option>
+                    <option value="Type 1">Type 1</option>
+                    <option value="Type 2">Type 2</option>
+                    <option value="Gestational">Gestational</option>
+                    <option value="Prediabetes">Prediabetes</option>
+                    <option value="Caregiver">I am a caregiver</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="qInsurance">Primary insurance*</label>
+                  <input id="qInsurance" name="insuranceProvider" placeholder="Plan name" required />
+                </div>
+                <div class="form-field">
+                  <label for="qCoverageStart">Coverage start date</label>
+                  <input id="qCoverageStart" name="coverageStart" type="month" />
+                </div>
+                <div class="form-field">
+                  <label for="qPhysician">Treating physician</label>
+                  <input id="qPhysician" name="physician" placeholder="Dr. name / clinic" />
+                </div>
+              </div>
+              <div class="form-nav">
+                <button class="button ghost" type="button" data-prev>Back</button>
+                <button class="button primary" type="button" data-next>Next</button>
+              </div>
+            </fieldset>
+
+            <fieldset data-step="3" class="form-step">
+              <legend>Supply needs</legend>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label>What equipment do you use or want?</label>
+                  <div class="checkbox-grid">
+                    <label><input type="checkbox" name="supplyNeeds" value="CGM - Dexcom" /> Dexcom CGM</label>
+                    <label><input type="checkbox" name="supplyNeeds" value="CGM - Libre" /> Libre CGM</label>
+                    <label><input type="checkbox" name="supplyNeeds" value="Insulin pump" /> Insulin pump + sets</label>
+                    <label><input type="checkbox" name="supplyNeeds" value="Smart meter" /> Smart glucose meter</label>
+                    <label><input type="checkbox" name="supplyNeeds" value="Test strips" /> Test strips &amp; lancets</label>
+                    <label><input type="checkbox" name="supplyNeeds" value="Accessories" /> Adhesives / accessories</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="qNotes">Anything else we should know?</label>
+                  <textarea id="qNotes" name="notes" rows="4" placeholder="Tell us about urgent needs or doctor instructions."></textarea>
+                </div>
+              </div>
+              <div class="form-nav">
+                <button class="button ghost" type="button" data-prev>Back</button>
+                <button class="button primary" type="submit">Submit &amp; Schedule Review</button>
+              </div>
+              <p class="form-footnote">
+                Submitting this form authorizes America’s Affordable Medical to confirm coverage and contact you via the methods provided.
+              </p>
+            </fieldset>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="brand-name">America's Affordable Medical</p>
+          <p>Your nationwide partner for diabetes DME.</p>
+        </div>
+        <div>
+          <p class="footer-title">Compliance</p>
+          <ul>
+            <li>HIPAA &amp; ADA compliant operations</li>
+            <li>Medicare DMEPOS accredited</li>
+            <li>NABP verified pharmacy partners</li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <ul>
+            <li><a href="tel:18885551234">(888) 555-1234</a></li>
+            <li><a href="mailto:support@aamcare.com">support@aamcare.com</a></li>
+            <li>123 Wellness Way, Suite 400, Atlanta, GA</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-subtext">© <span id="footer-year"></span> America's Affordable Medical. All rights reserved.</p>
+    </footer>
+
+    <script src="/assets/main.js" defer></script>
+    <script src="/assets/qualify.js" defer></script>
+  </body>
+</html>
+
